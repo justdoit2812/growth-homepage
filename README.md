@@ -37,9 +37,9 @@ growth-homepage/
 
 ## 运行方式
 
-**方式一（最简单）：** 直接双击 `index.html`，用浏览器打开即可。所有页面、样式、脚本均可在本地文件方式下正常工作。
+**方式一：** 直接双击 `index.html`，用浏览器打开即可。所有页面、样式、脚本均可在本地文件方式下正常工作。
 
-**方式二（推荐，便于后续开发）：** 使用 VS Code 的 Live Server 插件：
+**方式二：** 使用 VS Code 的 Live Server 插件：
 
 1. 用 VS Code 打开本文件夹；
 2. 安装 "Live Server" 扩展；
@@ -53,25 +53,3 @@ python -m http.server 8000
 # 然后访问 http://localhost:8000
 ```
 
-## 部署到 GitHub Pages（可选）
-
-1. 在 GitHub 上创建一个新仓库，命名为 `growth-homepage`，不要勾选自动生成 README；
-2. 把本地代码推送上去：
-   ```bash
-   git remote add origin https://github.com/justdoit2812/growth-homepage.git
-   git push -u origin master
-   ```
-3. 仓库页面 → Settings → Pages → Branch 选择 `master`（或 `main`）→ Save；
-4. 等待约 1 分钟，访问 `https://justdoit2812.github.io/growth-homepage/`。
-
-## 内容维护指南
-
-个人信息（姓名、学习方向、GitHub 用户名、学习记录、技能、项目描述）已填入真实内容。后续维护：
-
-1. 学习记录（`records.html`）每条包含时间 / 学了什么 / 问题 / 解决方式，每学完新东西复制一个 `timeline-item` 补一条（至少保留 3 条）；
-2. 技能（`skills.html`）按"我用它做过什么"来写，避免"熟悉 / 了解"这类空话；
-3. 每次更新后，在学习记录和首页"最近更新"里各补一条，并 git commit 一次。
-
-## 隐私说明
-
-本站只包含 GitHub 主页这一类公开联系方式，不涉及手机号、邮箱、家庭住址、身份证号等敏感信息。留言表单为纯前端演示，数据只保存在访问者自己的浏览器 `localStorage` 中，不会上传服务器。
