@@ -34,55 +34,43 @@
     <section class="container section">
       <ol class="timeline">
 
-        <!-- TODO: 以下为示例记录，请替换成你自己的真实经历（保留至少 3 条） -->
         <li class="timeline-item">
-          <div class="timeline-date">2026 年 10 月</div>
+          <div class="timeline-date">2026 年暑假</div>
           <div class="timeline-body">
-            <h3>学习 HTML 基础与页面结构</h3>
+            <h3>系统复习巩固 C 语言</h3>
             <ul class="record-list">
-              <li><strong>学了什么：</strong>HTML 常用标签、语义化结构（header / main / footer）、超链接与图片。</li>
-              <li><strong>遇到的问题：</strong>一开始所有内容都用 &lt;div&gt; 堆出来，页面能看但结构很乱，自己也看不懂。</li>
-              <li><strong>怎么解决的：</strong>重读了 MDN 的"HTML 语义化"文档，把网页按"页头 / 主体 / 页脚"重新划分，并用&lt;section&gt;、&lt;nav&gt;替换掉了大部分 &lt;div&gt;。重写之后结构清晰了很多。</li>
+              <li><strong>学了什么：</strong>利用暑假把 C 语言系统过了一遍，重点复习了指针、数组与函数等核心知识点，把大一学得不够扎实的部分补起来。</li>
+              <li><strong>遇到的问题：</strong>指针的部分知识点（指针与地址、指针与数组的关系）当时理解了好一会儿，看书能懂但自己一写就懵。</li>
+              <li><strong>怎么解决的：</strong>通过刷题巩固——同一类指针题目反复练习，做错了就回去对照教材和网上的资料弄懂原理再重写，最后基本能独立写出来。</li>
             </ul>
           </div>
         </li>
 
         <li class="timeline-item">
-          <div class="timeline-date">2026 年 10 月底</div>
+          <div class="timeline-date">2026 年秋季学期（本学期）</div>
           <div class="timeline-body">
-            <h3>学习 CSS 布局：从"调不对"到理解盒模型</h3>
+            <h3>学习数据结构</h3>
             <ul class="record-list">
-              <li><strong>学了什么：</strong>盒模型、Flexbox 弹性布局、常见居中方案。</li>
-              <li><strong>遇到的问题：</strong>给元素设置了 width 却总觉得"实际占的地方比写的大"，间距怎么调都不对。</li>
-              <li><strong>怎么解决的：</strong>搞清楚了 content-box 和 border-box 的区别——padding 和 border 会被算进/不算进宽度。后来统一加 <code>* { box-sizing: border-box; }</code> 问题消失。</li>
+              <li><strong>学了什么：</strong>本学期课程学习数据结构：线性表、栈与队列、树、图，以及常见的排序和查找算法。</li>
+              <li><strong>遇到的问题：</strong>还有部分算法没有通过自己写代码复现，目前停留在"看得懂、讲得出"的理论层面，一上手写还是有困难。</li>
+              <li><strong>打算怎么解决：</strong>安排好时间，把没实现的算法逐个用程序写出来验证；等 Python 学完之后，再计划用 Python 把这些算法重新实现一遍，既练算法也练语言。</li>
             </ul>
           </div>
         </li>
 
         <li class="timeline-item">
-          <div class="timeline-date">2026 年 11 月上旬</div>
+          <div class="timeline-date">2026 年 11 月（本月）</div>
           <div class="timeline-body">
-            <h3>学习 JavaScript 基础与 DOM 操作</h3>
+            <h3>开始学习 Python 基础语法</h3>
             <ul class="record-list">
-              <li><strong>学了什么：</strong>变量与函数、事件监听（addEventListener）、用 JS 修改页面内容。</li>
-              <li><strong>遇到的问题：</strong>脚本写在 &lt;head&gt; 里时，document.getElementById 拿不到元素，一直返回 null。</li>
-              <li><strong>怎么解决的：</strong>查资料明白了"脚本执行时 DOM 还没加载"的问题，把 &lt;script&gt; 放到 &lt;/body&gt; 前面就正常了。这个网站的联系表单验证就是用同样的方式写的。</li>
+              <li><strong>学了什么：</strong>Python 基础语法：变量与数据类型、流程控制、函数、列表 / 字典等常用结构。</li>
+              <li><strong>遇到的问题：</strong>学完基础语法后，感觉接下来的学习方向有点乱：不确定现在是否应该立刻深入学习下去，还是先把方向定清楚再继续。</li>
+              <li><strong>还没解决：</strong>这个问题暂时没有答案。我打算先了解清楚 AI 应用开发方向具体需要什么，再决定 Python 学到什么程度、往哪个分支深入。</li>
             </ul>
           </div>
         </li>
 
-        <li class="timeline-item">
-          <div class="timeline-date">2026 年 11 月中旬</div>
-          <div class="timeline-body">
-            <h3>学习 Git 与 GitHub 的基本工作流</h3>
-            <ul class="record-list">
-              <li><strong>学了什么：</strong>git init / add / commit 的含义、如何推送本地仓库到 GitHub。</li>
-              <li><strong>遇到的问题：</strong>第一次 commit 时报错提示没有配置用户名和邮箱，推送时也不知道远程地址怎么写。</li>
-              <li><strong>怎么解决的：</strong>按报错提示执行了 <code>git config --global user.name</code> 和 <code>user.email</code>；远程推送用 <code>git remote add origin</code> 关联仓库后解决。</li>
-              <li><strong>还没解决：</strong>分支和合并（branch / merge）还只用过一次，多人协作的工作流还不熟练，计划下个月练习。</li>
-            </ul>
-          </div>
-        </li>
+        <!-- TODO: 每学完新东西，复制上面一个 timeline-item 在这里继续添加 -->
 
       </ol>
 
