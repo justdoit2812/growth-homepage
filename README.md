@@ -55,24 +55,23 @@ python -m http.server 8000
 
 ## 部署到 GitHub Pages（可选）
 
-1. 在 GitHub 上创建一个新仓库（例如 `growth-homepage`），不要勾选自动生成 README；
+1. 在 GitHub 上创建一个新仓库，命名为 `growth-homepage`，不要勾选自动生成 README；
 2. 把本地代码推送上去：
    ```bash
-   git remote add origin https://github.com/<你的用户名>/growth-homepage.git
+   git remote add origin https://github.com/justdoit2812/growth-homepage.git
    git push -u origin master
    ```
 3. 仓库页面 → Settings → Pages → Branch 选择 `master`（或 `main`）→ Save；
-4. 等待约 1 分钟，访问 `https://<你的用户名>.github.io/growth-homepage/`。
+4. 等待约 1 分钟，访问 `https://justdoit2812.github.io/growth-homepage/`。
 
-## 内容替换指南
+## 内容维护指南
 
-网页中的示例内容都标有 `<!-- TODO: ... -->` 注释，替换为自己的真实信息时：
+个人信息（姓名、学习方向、GitHub 用户名、学习记录、技能、项目描述）已填入真实内容。后续维护：
 
-1. 全局搜索 `TODO`，按注释提示逐条替换（姓名、一句话介绍、GitHub 用户名、邮箱等）；
-2. 学习记录（`records.html`）每条包含时间 / 学了什么 / 问题 / 解决方式，至少保留 3 条真实记录；
-3. 技能（`skills.html`）建议按"我用它做过什么"来写，避免"熟悉 / 了解"这类空话；
-4. 每次学完新东西，在学习记录和首页"最近更新"里各补一条。
+1. 学习记录（`records.html`）每条包含时间 / 学了什么 / 问题 / 解决方式，每学完新东西复制一个 `timeline-item` 补一条（至少保留 3 条）；
+2. 技能（`skills.html`）按"我用它做过什么"来写，避免"熟悉 / 了解"这类空话；
+3. 每次更新后，在学习记录和首页"最近更新"里各补一条，并 git commit 一次。
 
 ## 隐私说明
 
-本站只包含 GitHub 主页与邮箱两类联系方式，不涉及手机号、家庭住址、身份证号等敏感信息。留言表单为纯前端演示，数据只保存在访问者自己的浏览器 `localStorage` 中，不会上传服务器。
+本站只包含 GitHub 主页这一类公开联系方式，不涉及手机号、邮箱、家庭住址、身份证号等敏感信息。留言表单为纯前端演示，数据只保存在访问者自己的浏览器 `localStorage` 中，不会上传服务器。
