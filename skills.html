@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技能展示 | 我的成长主页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">我的成长主页</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">关于我</a></li>
+        <li><a href="records.html">学习记录</a></li>
+        <li><a href="skills.html">技能展示</a></li>
+        <li><a href="projects.html">项目作品</a></li>
+        <li><a href="contact.html">联系方式</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>技能展示</h1>
+        <p>不写"熟悉 / 了解"这种空话——每项技能都附上我实际用它做过的事或写过的代码。</p>
+      </div>
+    </section>
+
+    <!-- ③ 技能展示：技能 + 用它做过什么（证据） -->
+    <section class="container section">
+      <div class="skill-table">
+        <table>
+          <thead>
+            <tr>
+              <th>技能</th>
+              <th>我用它做过什么（证据）</th>
+              <th>当前水平</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- TODO: 替换成你自己的真实技能与证据 -->
+            <tr>
+              <td><strong>HTML / CSS</strong></td>
+              <td>独立完成了本网站全部 5 个页面的结构与样式（可点开右键"查看源代码"验证），包括响应式布局与时间线排版。</td>
+              <td><span class="level level-2">能独立完成静态页面</span></td>
+            </tr>
+            <tr>
+              <td><strong>JavaScript</strong></td>
+              <td>为本站编写了导航高亮、移动端菜单、留言表单校验等交互（代码见下方片段及 <code>js/main.js</code>）。</td>
+              <td><span class="level level-1">能写基础的交互逻辑</span></td>
+            </tr>
+            <tr>
+              <td><strong>Git</strong></td>
+              <td>本网站的代码全部用 Git 管理，完成过 init / add / commit / push 完整流程，仓库含 README。</td>
+              <td><span class="level level-1">掌握单人开发工作流</span></td>
+            </tr>
+            <tr>
+              <td><strong>C 语言</strong></td>
+              <td>课程作业：用 C 完成过成绩排序与文件读写的练习程序。</td>
+              <td><span class="level level-1">课程作业水平</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="level-legend">
+          水平说明：<span class="level level-1">入门</span> = 能做课程/练习级任务；
+          <span class="level level-2">上手</span> = 能独立完成小项目；不写"精通"。
+        </p>
+      </div>
+    </section>
+
+    <!-- 证据 1：代码片段（本站表单校验的真实代码） -->
+    <section class="container section">
+      <h2 class="section-title">代码片段 · 表单验证（本站 <a href="contact.html">联系方式页</a> 留言表单的校验逻辑）</h2>
+      <p class="code-desc">这段代码取自 <code>js/main.js</code>，作用是：提交留言前检查邮箱格式是否正确，错误时给出红框提示，通过后把留言存入浏览器 localStorage。</p>
+      <pre class="code-block"><code>// 简单的邮箱格式校验
+function isValidEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+// 提交留言前先校验
+form.addEventListener('submit', function (e) {
+  e.preventDefault();               // 阻止表单默认提交
+  if (!isValidEmail(emailInput.value)) {
+    showError(emailInput, '邮箱格式不正确');
+    return;
+  }
+  saveMessage({                     // 校验通过，存入 localStorage
+    name: nameInput.value,
+    email: emailInput.value,
+    message: messageInput.value,
+    time: new Date().toLocaleString()
+  });
+  form.reset();
+});</code></pre>
+    </section>
+
+    <!-- 证据 2：作品链接 -->
+    <section class="container section">
+      <h2 class="section-title">作品证据</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3>本网站（我的成长主页）</h3>
+          <p>你现在看到的就是：5 个页面互相跳转、响应式布局、原生 JS 交互，无任何框架。</p>
+          <a class="card-link" href="projects.html">查看项目详情 →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧮</div>
+          <h3>C 语言练习：成绩管理小程序</h3>
+          <p>课程练习作品：从文件读取学生成绩，排序后输出统计结果。<!-- TODO: 可换成你的真实作品 --></p>
+          <a class="card-link" href="https://github.com/你的用户名" target="_blank" rel="noopener">源码仓库（GitHub）→</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <a href="https://github.com/你的用户名" target="_blank" rel="noopener">GitHub 主页</a>
+        <!-- TODO: 替换成你的 GitHub 地址 -->
+      </p>
+      <p class="footer-meta">我的成长主页 · 持续更新中 · <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <button id="backTop" class="back-top" title="回到顶部" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

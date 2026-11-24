@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页 · 关于我 | 我的成长主页</title>
+  <meta name="description" content="我的个人学习记录与技能展示主页">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航栏：每个页面共用，当前页面会自动高亮（见 js/main.js） -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">我的成长主页</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">关于我</a></li>
+        <li><a href="records.html">学习记录</a></li>
+        <li><a href="skills.html">技能展示</a></li>
+        <li><a href="projects.html">项目作品</a></li>
+        <li><a href="contact.html">联系方式</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ① 关于我：我是谁 / 学习方向 / 一句话介绍 -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-avatar" aria-hidden="true">CN</div>
+        <div class="hero-text">
+          <p class="hero-hello">你好，我是</p>
+          <h1>你的名字<!-- TODO: 替换成你的真实姓名或昵称 --></h1>
+          <p class="hero-intro">
+            <!-- TODO: 替换成你自己的一句话介绍 -->
+            一句话介绍：一名喜欢动手写代码的大一学生，正在从"能看懂"走向"能做出来"。
+          </p>
+          <p class="hero-direction">
+            <strong>学习方向：</strong>计算机科学与技术 · 目前主攻 Web 前端基础
+            （HTML / CSS / JavaScript），后续计划学习数据结构与后端开发。
+            <!-- TODO: 按你的真实专业和方向修改 -->
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="records.html">看看我的学习记录 →</a>
+            <a class="btn btn-outline" href="projects.html">项目作品</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 这个主页是干什么的（对应作业目的） -->
+    <section class="container section">
+      <h2 class="section-title">这个主页是做什么的？</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <h3>成长记录</h3>
+          <p>记录我从"不会"到"会"的过程：学过的东西、踩过的坑、想明白的事。每次学到新内容我都会补一条。</p>
+          <a class="card-link" href="records.html">去学习记录 →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛠️</div>
+          <h3>技能展示</h3>
+          <p>不只写"熟悉 / 了解"，每项技能都有对应的代码或作品作为证据，能实际跑起来看。</p>
+          <a class="card-link" href="skills.html">看技能与证据 →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>个人名片</h3>
+          <p>找实习、参加竞赛、申请项目时，可以直接把这个链接发给别人看的个人空间。</p>
+          <a class="card-link" href="contact.html">联系我 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最近更新（引导跳转到其他页面，满足"页面互相跳转"要求） -->
+    <section class="container section">
+      <h2 class="section-title">最近更新</h2>
+      <ul class="update-list">
+        <li>
+          <span class="update-date">2026-11</span>
+          <a href="records.html">新增学习记录：完成表单验证的 JavaScript 练习</a>
+        </li>
+        <li>
+          <span class="update-date">2026-11</span>
+          <a href="projects.html">项目「个人成长主页」第一个版本上线</a>
+        </li>
+        <!-- TODO: 每次更新内容后在这里加一条 -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- 页脚：所有页面共用 -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <a href="https://github.com/你的用户名" target="_blank" rel="noopener">GitHub 主页</a>
+        <!-- TODO: 替换成你的 GitHub 地址 -->
+      </p>
+      <p class="footer-meta">我的成长主页 · 持续更新中 · <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <button id="backTop" class="back-top" title="回到顶部" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

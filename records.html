@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学习记录 | 我的成长主页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">我的成长主页</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">关于我</a></li>
+        <li><a href="records.html">学习记录</a></li>
+        <li><a href="skills.html">技能展示</a></li>
+        <li><a href="projects.html">项目作品</a></li>
+        <li><a href="contact.html">联系方式</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>学习记录</h1>
+        <p>从"不会"到"会"的过程。每条记录包含：时间 · 学了什么 · 遇到的问题 · 怎么解决的。</p>
+      </div>
+    </section>
+
+    <!-- ② 学习记录：时间线形式，每条包含 时间/学了什么/问题/解决方式 -->
+    <section class="container section">
+      <ol class="timeline">
+
+        <!-- TODO: 以下为示例记录，请替换成你自己的真实经历（保留至少 3 条） -->
+        <li class="timeline-item">
+          <div class="timeline-date">2026 年 10 月</div>
+          <div class="timeline-body">
+            <h3>学习 HTML 基础与页面结构</h3>
+            <ul class="record-list">
+              <li><strong>学了什么：</strong>HTML 常用标签、语义化结构（header / main / footer）、超链接与图片。</li>
+              <li><strong>遇到的问题：</strong>一开始所有内容都用 &lt;div&gt; 堆出来，页面能看但结构很乱，自己也看不懂。</li>
+              <li><strong>怎么解决的：</strong>重读了 MDN 的"HTML 语义化"文档，把网页按"页头 / 主体 / 页脚"重新划分，并用&lt;section&gt;、&lt;nav&gt;替换掉了大部分 &lt;div&gt;。重写之后结构清晰了很多。</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-date">2026 年 10 月底</div>
+          <div class="timeline-body">
+            <h3>学习 CSS 布局：从"调不对"到理解盒模型</h3>
+            <ul class="record-list">
+              <li><strong>学了什么：</strong>盒模型、Flexbox 弹性布局、常见居中方案。</li>
+              <li><strong>遇到的问题：</strong>给元素设置了 width 却总觉得"实际占的地方比写的大"，间距怎么调都不对。</li>
+              <li><strong>怎么解决的：</strong>搞清楚了 content-box 和 border-box 的区别——padding 和 border 会被算进/不算进宽度。后来统一加 <code>* { box-sizing: border-box; }</code> 问题消失。</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-date">2026 年 11 月上旬</div>
+          <div class="timeline-body">
+            <h3>学习 JavaScript 基础与 DOM 操作</h3>
+            <ul class="record-list">
+              <li><strong>学了什么：</strong>变量与函数、事件监听（addEventListener）、用 JS 修改页面内容。</li>
+              <li><strong>遇到的问题：</strong>脚本写在 &lt;head&gt; 里时，document.getElementById 拿不到元素，一直返回 null。</li>
+              <li><strong>怎么解决的：</strong>查资料明白了"脚本执行时 DOM 还没加载"的问题，把 &lt;script&gt; 放到 &lt;/body&gt; 前面就正常了。这个网站的联系表单验证就是用同样的方式写的。</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-date">2026 年 11 月中旬</div>
+          <div class="timeline-body">
+            <h3>学习 Git 与 GitHub 的基本工作流</h3>
+            <ul class="record-list">
+              <li><strong>学了什么：</strong>git init / add / commit 的含义、如何推送本地仓库到 GitHub。</li>
+              <li><strong>遇到的问题：</strong>第一次 commit 时报错提示没有配置用户名和邮箱，推送时也不知道远程地址怎么写。</li>
+              <li><strong>怎么解决的：</strong>按报错提示执行了 <code>git config --global user.name</code> 和 <code>user.email</code>；远程推送用 <code>git remote add origin</code> 关联仓库后解决。</li>
+              <li><strong>还没解决：</strong>分支和合并（branch / merge）还只用过一次，多人协作的工作流还不熟练，计划下个月练习。</li>
+            </ul>
+          </div>
+        </li>
+
+      </ol>
+
+      <p class="tip">
+        💡 这份记录会持续更新：每学完新东西就补一条。
+        <a href="contact.html">有问题想交流？去联系方式页给我留言 →</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <a href="https://github.com/你的用户名" target="_blank" rel="noopener">GitHub 主页</a>
+        <!-- TODO: 替换成你的 GitHub 地址 -->
+      </p>
+      <p class="footer-meta">我的成长主页 · 持续更新中 · <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <button id="backTop" class="back-top" title="回到顶部" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

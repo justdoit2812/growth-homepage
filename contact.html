@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系方式 | 我的成长主页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">我的成长主页</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">关于我</a></li>
+        <li><a href="records.html">学习记录</a></li>
+        <li><a href="skills.html">技能展示</a></li>
+        <li><a href="projects.html">项目作品</a></li>
+        <li><a href="contact.html">联系方式</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>联系方式</h1>
+        <p>欢迎交流学习问题、项目合作或指出我代码里的坑。</p>
+      </div>
+    </section>
+
+    <!-- ⑤ 联系方式：GitHub（不放手机号、住址等隐私信息） -->
+    <section class="container section">
+      <h2 class="section-title">找到我</h2>
+      <div class="contact-grid">
+        <a class="contact-card" href="https://github.com/你的用户名" target="_blank" rel="noopener">
+          <div class="contact-icon">🐙</div>
+          <div>
+            <h3>GitHub</h3>
+            <p>github.com/你的用户名</p>
+            <!-- TODO: 替换成你的 GitHub 用户名 -->
+          </div>
+        </a>
+        <a class="contact-card" href="mailto:yourname@example.com">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h3>邮箱</h3>
+            <p>yourname@example.com</p>
+            <!-- TODO: 替换成你的邮箱；不想放邮箱可删除这块 -->
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 交互元素：留言表单（JS 校验 + localStorage 保存，逻辑见 js/main.js） -->
+    <section class="container section">
+      <h2 class="section-title">给我留言</h2>
+      <p class="form-desc">提交前会做表单校验；留言保存在你浏览器的 localStorage 中（纯前端演示，不会发送到服务器）。</p>
+
+      <form id="messageForm" class="message-form" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">称呼 <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="怎么称呼你？" maxlength="20">
+            <p class="form-error" id="nameError"></p>
+          </div>
+          <div class="form-field">
+            <label for="email">邮箱 <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+            <p class="form-error" id="emailError"></p>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">留言内容 <span class="required">*</span></label>
+          <textarea id="message" name="message" rows="5" placeholder="想聊什么？（学习问题 / 项目合作 / 指出 bug 都行）" maxlength="300"></textarea>
+          <p class="form-error" id="messageError"></p>
+        </div>
+        <button type="submit" class="btn btn-primary">提交留言</button>
+        <p class="form-success" id="formSuccess">✅ 提交成功！感谢留言，我会尽快查看。</p>
+      </form>
+
+      <div id="messageList" class="message-list-wrap">
+        <h3>历史留言（保存在你的浏览器中）</h3>
+        <ul id="messageListInner" class="message-list">
+          <!-- 留言由 js/main.js 动态渲染 -->
+        </ul>
+        <button id="clearMessages" class="btn btn-ghost" type="button">清空本地留言</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <a href="https://github.com/你的用户名" target="_blank" rel="noopener">GitHub 主页</a>
+        <!-- TODO: 替换成你的 GitHub 地址 -->
+      </p>
+      <p class="footer-meta">我的成长主页 · 持续更新中 · <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <button id="backTop" class="back-top" title="回到顶部" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>项目作品 | 我的成长主页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">我的成长主页</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">关于我</a></li>
+        <li><a href="records.html">学习记录</a></li>
+        <li><a href="skills.html">技能展示</a></li>
+        <li><a href="projects.html">项目作品</a></li>
+        <li><a href="contact.html">联系方式</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>项目作品</h1>
+        <p>每个项目都写清楚：解决什么问题 · 我负责什么 · 用了什么技术 · 最大困难是什么。</p>
+      </div>
+    </section>
+
+    <!-- ④ 项目作品：至少 1 个 -->
+    <section class="container section">
+
+      <!-- 项目一（即本网站本身，真实不编造） -->
+      <article class="project-card">
+        <div class="project-head">
+          <h2>项目一：我的成长主页（就是你正在看的这个网站）</h2>
+          <span class="project-tag">个人项目 · 2026.11 · 进行中</span>
+        </div>
+        <div class="project-grid">
+          <div class="project-info">
+            <ul class="record-list">
+              <li><strong>解决什么问题：</strong>需要一个能长期记录学习过程、又能对外展示的作品集页面，而不是散落在各处的笔记。以后找实习可以直接把这个链接发出去。</li>
+              <li><strong>我负责什么：</strong>独立完成全部工作——页面结构设计、样式编写、交互逻辑、Git 版本管理。</li>
+              <li><strong>用了什么技术：</strong>HTML5 语义化标签、CSS3（Flexbox 布局 / 响应式设计）、原生 JavaScript（DOM 操作 / 表单校验 / localStorage）、Git。</li>
+              <li><strong>最大困难是什么：</strong>JS 脚本放在 &lt;head&gt; 里导致拿不到 DOM 元素，排查了很久才理解脚本执行时机和 DOM 加载顺序的关系；另外移动端导航栏的响应式布局也调了几轮才满意。</li>
+              <li><strong>项目收获：</strong>第一次完整走通"从零写页面 → 用 Git 提交 → 编写 README"的完整流程，具体过程记录在<a href="records.html">学习记录</a>页。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="index.html">在线浏览本站</a>
+          <a class="btn btn-outline" href="https://github.com/你的用户名" target="_blank" rel="noopener">GitHub 源码仓库</a>
+          <!-- TODO: 替换成你的真实仓库地址 -->
+        </div>
+      </article>
+
+      <!-- TODO: 后续做了新项目，复制上面这个 project-card 结构继续添加 -->
+    </section>
+
+    <section class="container section">
+      <p class="tip">想交流项目思路或指出我的代码问题？欢迎去<a href="contact.html">联系方式页</a>留言。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <a href="https://github.com/你的用户名" target="_blank" rel="noopener">GitHub 主页</a>
+        <!-- TODO: 替换成你的 GitHub 地址 -->
+      </p>
+      <p class="footer-meta">我的成长主页 · 持续更新中 · <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <button id="backTop" class="back-top" title="回到顶部" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
